@@ -11,3 +11,32 @@ REST API, принимающее на вход POST запросы с содер
 2. Выполните в терминале docker-compose build
 3. 
 4. Перейдите на http://localhost:8000/docs/
+
+### Начало работы
+
+1. Склонируйте проект:
+
+
+```git clone https://github.com/hlystovea/BBBS.git```  
+
+2. Запустите контейнеры:
+
+```docker-compose up -d```
+
+Frontend подтянется из docker-hub. 
+
+4. Запустите миграции:
+
+```docker-compose exec backend python manage.py migrate --noinput```
+
+5. Соберите статику:
+
+```docker-compose exec backend python manage.py collectstatic --no-input```
+
+6. Создайте своего суперпользователя:
+
+```docker-compose exec backend python manage.py createsuperuser```
+
+7. Сайт будет доступен по адресу:
+ 
+```http://127.0.0.1```
