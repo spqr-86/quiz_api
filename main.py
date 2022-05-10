@@ -7,7 +7,7 @@ from fastapi_sqlalchemy import DBSessionMiddleware
 from rotes import routes
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+load_dotenv(os.path.join(BASE_DIR, "env.example"))
 
 app = FastAPI()
 
