@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Query
-from sqlalchemy.orm import Session
 from fastapi_sqlalchemy import db
 
 from . import servise, models

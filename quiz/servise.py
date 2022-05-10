@@ -1,8 +1,6 @@
 import json
 import requests
 
-from sqlalchemy.orm import Session
-
 from .models import Question
 from .schemas import QuestionCreate
 
@@ -40,7 +38,6 @@ def create_questions(db, count: int):
     questions = get_questions_from_api(service_url, count)
 
     for q in questions:
-        print(f'ЭТО НАША ДБ {db}')
         if db.session.query(Question):
             while check_exist(db, q):
                 q = get_questions_from_api(service_url, 1)
