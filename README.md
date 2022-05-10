@@ -21,8 +21,8 @@ REST API, принимающее на вход POST запросы с содер
 
 4. Запустите миграции:
 
-```docker-compose run web alembic revision -m "Initial migration"```. 
-```docker-compose run web alembic upgrade head"```. 
+```docker-compose run web alembic revision -m "Initial migration"```. \
+```docker-compose run web alembic upgrade head"```. \
 ```docker-compose run web alembic revision --autogenerate -m "Initial migration"```. 
 
 3. Запустите контейнеры:
