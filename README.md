@@ -6,12 +6,6 @@ REST API, принимающее на вход POST запросы с содер
 Ответом на запрос из п.2.a должен быть предыдущей сохранённый вопрос для викторины. В случае его отсутствия - пустой объект.
 
 
-# Информация по запросам
-1. Склонируйте репозиторий
-2. Выполните в терминале docker-compose build
-3. 
-4. Перейдите на http://localhost:8000/docs/
-
 ### Начало работы
 
 1. Склонируйте проект:
@@ -19,24 +13,20 @@ REST API, принимающее на вход POST запросы с содер
 
 ```git clone https://github.com/hlystovea/BBBS.git```  
 
-2. Запустите контейнеры:
+
+2. Создайте файл .env по примеру env.example.
+
+
+3. Запустите контейнеры:
 
 ```docker-compose up -d```
 
-Frontend подтянется из docker-hub. 
-
 4. Запустите миграции:
 
-```docker-compose exec backend python manage.py migrate --noinput```
+```docker-compose run web alembic revision -m "Initial migration"```
+```docker-compose run web alembic upgrade head"```
+```docker-compose run web alembic revision --autogenerate -m "Initial migration""```
 
-5. Соберите статику:
-
-```docker-compose exec backend python manage.py collectstatic --no-input```
-
-6. Создайте своего суперпользователя:
-
-```docker-compose exec backend python manage.py createsuperuser```
-
-7. Сайт будет доступен по адресу:
+5. Документация будет доступна по адресу:
  
-```http://127.0.0.1```
+```http://localhost:8000/docs/```
