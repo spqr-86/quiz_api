@@ -9,7 +9,7 @@ REST API, принимающее на вход POST запросы с содер
 1. Склонируйте проект:
 
 
-```git clone https://github.com/hlystovea/BBBS.git```  
+```git clone https://github.com/spqr-86/quiz_api```  
 
 
 2. Создайте файл .env по примеру env.example.
