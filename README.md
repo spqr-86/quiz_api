@@ -25,15 +25,15 @@ REST API, принимающее на вход POST запросы с содер
 ```docker-compose run web alembic upgrade head"```. \
 ```docker-compose run web alembic revision --autogenerate -m "Initial migration"```. 
 
-3. Запустите контейнеры:
+5. Запустите контейнеры:
 
 ```docker-compose up```
 
-5. Документация будет доступна по адресу:
+6. Документация будет доступна по адресу:
  
 ```http://localhost:8000/docs/```
 
-6. Пример POST запроса:
+7. Пример POST запроса:
 
 http://0.0.0.0:8000/quiz/questions/?count=10
 
